@@ -65,6 +65,7 @@ function App() {
       <button onClick={toggleFilterMode}>
         {filterMode === 'all' && '未完了のTodoのみ表示'}
         {filterMode === 'incomplete' && '完了のTodoのみ表示'}
+        {filterMode === 'complete' && 'すべてのTodoを表示'}
       </button>
       <ul>
         {filteredTodos.map((todo, index) => (
