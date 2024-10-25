@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  background-color: blue; 
+}
+
+#root{
+  position: absolute;  
+  background-image: url('./todo.png'); /* 画像のパスを指定 */
+  background-size: cover; /* 画像のサイズを調整 */
+  background-position: center; /* 画像の位置を中央に */
+}
+
+div {
+  width: 100%; 
+  height: max-content;
+  padding-left: 250px;
+}
+
+h1 {
+  color: #fdc33c;
 }

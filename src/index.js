@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./index.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
@@ -69,7 +70,7 @@ function App() {
       </button>
       <ul>
         {filteredTodos.map((todo, index) => (
-          <li key={index} style={{ color: todo.done ? 'red' : 'black' }}>
+          <li key={index} style={{ color: todo.done ? 'red' : '#fdc33c' }}>
             {todo.text}{todo.done ? '(完了)' : ''}
             {!todo.done && (
               <button onClick={() => handleDoneTodo(index)}>完了</button>
