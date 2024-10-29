@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   margin: 0;
@@ -15,22 +14,47 @@ code {
 }
 
 html {
-  background-color: blue; 
+  background-image: url('./Todo\　Clear.png'); /* 画像のパスを指定 */
+  background-size: 50%; /* 画像のサイズを調整 */
+  background-position: center; /* 画像の位置を中央に */
+  align-items: center;/* 垂直方向の中央揃え */
 }
 
 #root{
   position: absolute;  
-  background-image: url('./todo.png'); /* 画像のパスを指定 */
-  background-size: cover; /* 画像のサイズを調整 */
-  background-position: center; /* 画像の位置を中央に */
+  background-color: black;
+  width: 100%;
+  
 }
 
-div {
-  width: 100%; 
-  height: max-content;
-  padding-left: 250px;
+
+.container {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+
+  /*height: 100vh;*/ /* ビューポートの高さ全体を使用 */
+  /*background-image: url('./todo.png'); /* 画像のパスを指定 */
+  /*background-size: cover; /* 画像のサイズを調整 */
+  /*background-position: center; /* 画像の位置を中央に */
+  /*align-items: center;/* 垂直方向の中央揃え */
 }
+
 
 h1 {
   color: #fdc33c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  height: 25px;
+  cursor: pointer;
+  }
+
+ul,li {
+  display: block;
+  font-size: 1.25em;
+}
+
+form {
+  padding-top: 25px;
 }

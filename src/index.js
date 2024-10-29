@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import "./index.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -51,7 +51,7 @@ function App() {
   });
 
   return (
-    <div>
+    <div className='container'>
       <h1>Todoリスト</h1>
       <form onSubmit={handleAddTodo}>
         <input
@@ -62,15 +62,14 @@ function App() {
           }}
         />
         <button type="submit">追加</button>
-      </form>
-      <button onClick={toggleFilterMode}>
+      <button className="toggle-filter-button" onClick={toggleFilterMode}>
         {filterMode === 'all' && '未完了のTodoのみ表示'}
         {filterMode === 'incomplete' && '完了のTodoのみ表示'}
         {filterMode === 'complete' && 'すべてのTodoを表示'}
       </button>
       <ul>
         {filteredTodos.map((todo, index) => (
-          <li key={index} style={{ color: todo.done ? 'red' : '#fdc33c' }}>
+          <li key={index} style={{ color: todo.done ? '#0000ff' : '#fdc33c' }}>
             {todo.text}{todo.done ? '(完了)' : ''}
             {!todo.done && (
               <button onClick={() => handleDoneTodo(index)}>完了</button>
@@ -79,6 +78,7 @@ function App() {
           </li>
         ))}
       </ul>
+      </form>
     </div>
   );
 };
