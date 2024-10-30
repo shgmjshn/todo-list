@@ -60,10 +60,10 @@ function App() {
           onChange={(e) => {
             setInputValue(e.target.value);
           }}
-        />
-        <button type="submit">追加</button>
-      <button className="toggle-filter-button" onClick={toggleFilterMode}>
-        {filterMode === 'all' && '未完了のTodoのみ表示'}
+          />
+          <button type="submit">追加</button>
+        <button className="toggle-filter-button" onClick={toggleFilterMode}>
+          {filterMode === 'all' && '未完了のTodoのみ表示'}
         {filterMode === 'incomplete' && '完了のTodoのみ表示'}
         {filterMode === 'complete' && 'すべてのTodoを表示'}
       </button>

@@ -24,13 +24,13 @@ html {
   position: absolute;  
   background-color: black;
   width: 100%;
-  
 }
 
 
 .container {
   display: flex;
   justify-content: center; /* 水平方向の中央揃え */
+  height: 70px;
 
   /*height: 100vh;*/ /* ビューポートの高さ全体を使用 */
   /*background-image: url('./todo.png'); /* 画像のパスを指定 */
@@ -43,6 +43,7 @@ html {
 h1 {
   color: #fdc33c;
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
 }
 
 button {
@@ -56,5 +57,5 @@ ul,li {
 }
 
 form {
-  padding-top: 25px;
+  padding-top: 20px;
 }
