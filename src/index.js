@@ -13,7 +13,7 @@ function App() {
   const handleAddTodo = (e) => {
     e.preventDefault();
 
-    if (inputValue.trim() === '') {
+    if (inputValue.length < 1) {
       alert('Todoを入力してください');
       return;
     }
