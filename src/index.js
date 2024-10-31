@@ -13,7 +13,7 @@ function App() {
   const handleAddTodo = (e) => {
     e.preventDefault();
 
-    if (inputValue.length < 1) {
+    if (inputValue.trim() === '') {
       alert('Todoを入力してください');
       return;
     }
@@ -62,8 +62,11 @@ function App() {
           }}
           />
           <button type="submit">追加</button>
-        <button className="toggle-filter-button" onClick={toggleFilterMode}>
-          {filterMode === 'all' && '未完了のTodoのみ表示'}
+        <button onClick={(e) => {
+          e.preventDefault();
+          toggleFilterMode();
+        }}>
+        {filterMode === 'all' && '未完了のTodoのみ表示'}
         {filterMode === 'incomplete' && '完了のTodoのみ表示'}
         {filterMode === 'complete' && 'すべてのTodoを表示'}
       </button>
