@@ -1,4 +1,5 @@
-import React from 'react';
+//import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import "./index.css"
 
@@ -9,6 +10,15 @@ function App() {
   const [inputValue, setInputValue] = React.useState('');
   const [todos, setTodos] = React.useState([]);
   const [filterMode, setFilterMode] = React.useState('all'); // 'all', 'incomplete', 'complete'
+
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    setTodos(storedTodos);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  },[todos]);
 
   const handleAddTodo = (e) => {
     e.preventDefault();
